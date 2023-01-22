@@ -1,136 +1,299 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/* RESET */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  color: inherit;
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
 ul {
   list-style: none;
 }
 
-blockquote,
-q {
-  quotes: none;
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+/* VARIABLES */
+/*HEADER*/
+.header {
+  background-color: #00d1b2;
+  height: 10vh;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 80px;
+}
+.header__logo {
+  height: 60px;
+}
+.header__nav {
+  height: 40px;
+}
+.header__nav--list {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+}
+.header__nav--list li {
+  height: 100%;
+}
+.header__nav--list a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  background-color: white;
+  color: #00d1b2;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.header__nav--list a:hover {
+  background-color: #a7ede0;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* LANDING */
+.landing {
+  height: 90vh;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.landing__title {
+  width: 450px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #2e455d;
+  margin-top: 150px;
+}
+.landing__subtitle {
+  width: 700px;
+  text-align: center;
+  font-size: 30px;
+  color: #00d1b2;
+}
+.landing__img {
+  width: 1000px;
+  margin-top: 70px;
+}
+
+/* ABOUT ME */
+.about {
+  height: 100vh;
+  background-color: #00d1b2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #2e455d;
+  text-align: center;
+  padding: 80px;
+  margin-top: 100px;
+}
+.about__text {
+  font-size: 25px;
+  width: 1015px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px 0px;
+  color: white;
+}
+.about__media {
+  margin-top: 80px;
+  display: flex;
+  width: 500px;
+  gap: 70px;
+  justify-content: center;
+  padding: 0px 10px 0px 80px;
+}
+.about__media--fb {
+  background-color: #2e455d;
+  color: white;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  font-size: 50px;
+  text-align: center;
+  padding: 8px;
+}
+.about__media--fb:hover {
+  background-color: white;
+  color: #2e455d;
+  cursor: pointer;
+}
+.about__media--cv {
+  background-color: #2e455d;
+  color: white;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  padding: 11px 0px;
+}
+.about__media--cv:hover {
+  background-color: white;
+  color: #2e455d;
+  cursor: pointer;
+}
+
+.skills {
+  height: 700px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.skills__box {
+  height: 850px;
+  width: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: relative;
+  top: -250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__box--icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: #00d1b2;
+  margin-top: 50px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px 0px;
+}
+.skills__box--title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #2e455d;
+  padding: 30px 0px 20px 0px;
+}
+.skills__box--subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00d1b2;
+  padding: 40px 0px 10px 0px;
+}
+.skills__box--list {
+  font-size: 22px;
+  color: #2e455d;
+  text-align: center;
+  line-height: 1.5;
+}
+.skills__box--list-soft {
+  line-height: 2;
+}
+
+.projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects__title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #00d1b2;
+  text-align: center;
+  padding: 50px 0px 20px 0px;
+}
+.projects__subtitle {
+  font-size: 25px;
+  color: #2e455d;
+  text-align: center;
+}
+.projects__subtitle--link {
+  color: #00d1b2;
+}
+.projects__list {
+  width: 1500px;
+  height: 900px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+.projects__list--item {
+  border-radius: 20px;
+  background-color: #a7ede0;
+  height: 250px;
+  width: 400px;
+}
+
+.talk {
+  height: 100vh;
+  font-size: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.talk__title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #00d1b2;
+  text-align: center;
+  padding: 50px 0px 20px 0px;
+}
+.talk__subtitle {
+  font-size: 25px;
+  color: #2e455d;
+  text-align: center;
+  padding: 30px;
+}
+.talk__subtitle--email {
+  color: #00d1b2;
+}
+.talk__btn {
+  font-size: 25px;
+  color: #2e455d;
+  border: 4px solid #00d1b2;
+  border-radius: 50px;
+  padding: 20px 30px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.talk__btn--icon {
+  font-size: 30px;
+  color: #00d1b2;
+}
+.talk__btn:hover {
+  background-color: #00d1b2;
+  color: white;
+  cursor: pointer;
+}
+.talk__btn:hover .talk__btn--icon {
+  font-size: 30px;
+  color: white;
+}
+.talk__envelope {
+  position: absolute;
+  bottom: -200px;
+  color: #a7ede0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,129 +1,299 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/* RESET */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  color: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
 ul {
   list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+
+/* VARIABLES */
+$primary-color: #00d1b2;
+$secondary-color: white;
+$primary-color-fade: #a7ede0;
+$text-color: #2e455d;
+$font-title: 'Unbounded', sans-serif;
+$font-text: 'Roboto', sans-serif;
+
+/*HEADER*/
+.header {
+  background-color: $primary-color;
+  height: 10vh;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 80px;
+  &__logo {
+    height: 60px;
+  }
+  &__nav {
+    height: 40px;
+    &--list {
+      height: 100%;
+      display: flex;
+      gap: 10px;
+    }
+    &--list li {
+      height: 100%;
+    }
+    &--list a {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 130px;
+      background-color: $secondary-color;
+      color: $primary-color;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+    &--list a:hover {
+      background-color: $primary-color-fade;
+    }
+  }
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* LANDING */
+.landing {
+  height: 90vh;
+  background-color: $secondary-color;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    width: 450px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: $text-color;
+    margin-top: 150px;
+  }
+  &__subtitle {
+    width: 700px;
+    text-align: center;
+    font-size: 30px;
+    color: $primary-color;
+  }
+  &__img {
+    width: 1000px;
+    margin-top: 70px;
+  }
+}
+/* ABOUT ME */
+.about {
+  height: 100vh;
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-size: 40px;
+    font-weight: bold;
+    color: $text-color;
+    text-align: center;
+    padding: 80px;
+    margin-top: 100px;
+  }
+  &__text {
+    font-size: 25px;
+    width: 1015px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px 0px;
+    color: $secondary-color;
+  }
+  &__media {
+    margin-top: 80px;
+    display: flex;
+    width: 500px;
+    gap: 70px;
+    justify-content: center;
+    padding: 0px 10px 0px 80px;
+
+    &--fb {
+      background-color: $text-color;
+      color: $secondary-color;
+      height: 80px;
+      width: 80px;
+      border-radius: 10px;
+      font-size: 50px;
+      text-align: center;
+      padding: 8px;
+    }
+    &--fb:hover {
+      background-color: $secondary-color;
+      color: $text-color;
+      cursor: pointer;
+    }
+    &--cv {
+      background-color: $text-color;
+      color: $secondary-color;
+      height: 80px;
+      width: 80px;
+      border-radius: 10px;
+      font-size: 45px;
+      font-weight: bold;
+      text-align: center;
+      padding: 11px 0px;
+    }
+    &--cv:hover {
+      background-color: $secondary-color;
+      color: $text-color;
+      cursor: pointer;
+    }
+  }
+}
+.skills {
+  height: 700px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  &__box {
+    height: 850px;
+    width: 350px;
+    background-color: $secondary-color;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: relative;
+    top: -250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--icon {
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
+      background-color: $primary-color;
+      margin-top: 50px;
+      color: $secondary-color;
+      font-size: 50px;
+      text-align: center;
+      padding: 20px 0px;
+    }
+    &--title {
+      font-size: 30px;
+      font-weight: bold;
+      color: $text-color;
+      padding: 30px 0px 20px 0px;
+    }
+    &--subtitle {
+      font-size: 20px;
+      font-weight: bold;
+      color: $primary-color;
+      padding: 40px 0px 10px 0px;
+    }
+    &--list {
+      font-size: 22px;
+      color: $text-color;
+      text-align: center;
+      line-height: 1.5;
+    }
+    &--list-soft {
+      line-height: 2;
+    }
+  }
+}
+.projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-size: 50px;
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+    padding: 50px 0px 20px 0px;
+  }
+  &__subtitle {
+    font-size: 25px;
+    color: $text-color;
+    text-align: center;
+    &--link {
+      color: $primary-color;
+    }
+  }
+  &__list {
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    &--item {
+      border-radius: 20px;
+      background-color: $primary-color-fade;
+      height: 250px;
+      width: 400px;
+    }
+  }
+}
+.talk {
+  height: 100vh;
+  font-size: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  &__title {
+    font-size: 50px;
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+    padding: 50px 0px 20px 0px;
+  }
+  &__subtitle {
+    font-size: 25px;
+    color: $text-color;
+    text-align: center;
+    padding: 30px;
+    &--email {
+      color: $primary-color;
+    }
+  }
+  &__btn {
+    font-size: 25px;
+    color: $text-color;
+    border: 4px solid $primary-color;
+    border-radius: 50px;
+    padding: 20px 30px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    &--icon {
+      font-size: 30px;
+      color: $primary-color;
+    }
+  }
+  &__btn:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+    cursor: pointer;
+    .talk__btn--icon {
+      font-size: 30px;
+      color: $secondary-color;
+    }
+  }
+  &__envelope {
+    position: absolute;
+    bottom: -200px;
+    color: $primary-color-fade;
+  }
 }

@@ -6,49 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monica Hidalgo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Unbounded:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2eec946f56.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="./images/logo.png">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
-    <header>
-        <img src="./images/logo.png" alt="Logo Monica Hidalgo">
-        <nav>
-            <ul>
-                <li><a href="">About me</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+<body class="body">
+    <header id="landing" class="header">
+        <img class="header__logo" src="./images/logo.png" alt="Logo Monica Hidalgo">
+        <nav class="header__nav">
+            <ul class="header__nav--list">
+                <li><a href="./index.html#about">About me</a></li>
+                <li><a href="./index.html#projects">Projects</a></li>
+                <li><a href="./index.html#talk">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Web Developer</h1>
-            <h2>I entered the world of code and now I can't stop.</h2>
-            <img src="./images/main-img.png" alt="Logo Monica Hidalgo">
+        <section class="landing">
+            <h1 class="landing__title">Web Developer</h1>
+            <h2 class="landing__subtitle">I entered the world of code and now I can't stop.</h2>
+            <img class="landing__img" src="./images/main-img.png" alt="Logo Monica Hidalgo">
         </section>
-        <section>
-            <h2>Hi, I'm Mónica. Nice to meet you.</h2>
-            <p>After exploiting my proactive and organized side in the world of education and languages I retrained
+        <section id="about" class="about">
+            <h2 class="about__title">Hi, I'm Mónica. Nice to meet you.</h2>
+            <p class="about__text">After exploiting my proactive and organized side in the world of education and
+                languages I retrained
                 myself to be a web developer.
             </p>
-            <p>I'm always in search of new career and learning challenges
+            <p class="about__text">I'm always in search of new career and learning challenges
                 and I found in the tech sector the opportunity to learn and enjoy my creative self and my
                 problem-solving approach. </p>
-            <p>What am I attracted to the most about the tech world?
+            <p class="about__text">What am I attracted to the most about the tech world?
                 Working cooperatively as part of a team, daily challenges
                 to keep your mind active, and the possibility to work in
                 international and multidisciplinary environments.</p>
-            <div>
-                <div>in</div>
-                <div>CV</div>
+            <div class="about__media">
+                <a class="about__media--fb" href="www.linkedin.com/in/monicahidalgomartin"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a class="about__media--cv" href="#">CV<a>
             </div>
         </section>
-        <section>
-            <article>
-                <div></div>
-                <h3>Other Skills</h3>
-                <p>I have experience with:</p>
-                <ul>
+        <section class="skills">
+            <article class="skills__box">
+                <div class="skills__box--icon"><i class="fa-solid fa-star"></i></div>
+                <h3 class="skills__box--title">Other Skills</h3>
+                <p class="skills__box--subtitle">I have experience with:</p>
+                <ul class="skills__box--list skills__box--list-soft">
                     <li>Agile Philosophy</li>
                     <li>Scrum Methodology</li>
                     <li>Pair Programming</li>
@@ -58,11 +66,11 @@
                     <li>Fluent English</li>
                 </ul>
             </article>
-            <article>
-                <div></div>
-                <h3>Front End</h3>
-                <p>Languages I speak:</p>
-                <ul>
+            <article class="skills__box">
+                <div class="skills__box--icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3 class="skills__box--title">Front End</h3>
+                <p class="skills__box--subtitle">Languages I speak:</p>
+                <ul class="skills__box--list">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>SASS</li>
@@ -70,8 +78,8 @@
                     <li>React</li>
                     <li>GIT</li>
                 </ul>
-                <p>Dev Tools:</p>
-                <ul>
+                <p class="skills__box--subtitle">Dev Tools:</p>
+                <ul class="skills__box--list">
                     <li>Bootstrap</li>
                     <li>GitHub</li>
                     <li>VS Code</li>
@@ -80,11 +88,11 @@
                     <li>Zeplin</li>
                 </ul>
             </article>
-            <article>
-                <div></div>
-                <h3>Back End</h3>
-                <p>Basic Backend Knowledge:</p>
-                <ul>
+            <article class="skills__box">
+                <div class="skills__box--icon"><i class="fa-solid fa-database"></i></div>
+                <h3 class="skills__box--title">Back End</h3>
+                <p class="skills__box--subtitle">Basic Backend Knowledge:</p>
+                <ul class="skills__box--list">
                     <li>Node JS</li>
                     <li>Express JS</li>
                     <li>APIS</li>
@@ -92,23 +100,50 @@
                 </ul>
             </article>
         </section>
-        <section>
-            <h2>My projects</h2>
-            <p>Here are some of the projects I've work on. Want to know more? <a href=""></a>Email me.</a></p>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <section id="projects" class="projects">
+            <h2 class="projects__title">My projects</h2>
+            <p class="projects__subtitle">Here are some of the projects I've worked on. Want to know more? <a
+                    class="projects__subtitle--link" href="./index.html#talk">Email me.</a></p>
+            <div class="projects__list">
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+                <a href="#">
+                    <div class="projects__list--item"></div>
+                </a>
+
+            </div>
         </section>
-        <section>
-            <h2>Do you want to talk?</h2>
-            <p>I'm always open to discussing working opportunities.</p>
-            <a href="">Start a conversation</a>
+        <section id="talk" class="talk">
+            <h2 class="talk__title">Do you want to talk?</h2>
+            <p class="talk__subtitle">I'm always open to discussing working opportunities.</p>
+            <p class="talk__subtitle">You can contact me sending an email to: <span
+                    class="talk__subtitle--email">monicahidalgomartin@gmail.com</span>
+            </p>
+            <a class="talk__btn" href="./index.html#landing"><i class="talk__btn--icon fa-solid fa-rotate-left"></i>Go
+                back to main page</a>
+            <i class="talk__envelope fa-solid fa-envelope"></i>
         </section>
     </main>
 
