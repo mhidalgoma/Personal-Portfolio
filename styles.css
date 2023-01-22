@@ -20,7 +20,10 @@ a:active {
 }
 
 /* VARIABLES */
-/*HEADER*/
+body {
+  font-family: "Rubik", sans-serif;
+}
+
 .header {
   background-color: #00d1b2;
   height: 10vh;

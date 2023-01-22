@@ -22,10 +22,11 @@ $primary-color: #00d1b2;
 $secondary-color: white;
 $primary-color-fade: #a7ede0;
 $text-color: #2e455d;
-$font-title: 'Unbounded', sans-serif;
-$font-text: 'Roboto', sans-serif;
+$primary-font: 'Rubik', sans-serif;
 
-/*HEADER*/
+body {
+  font-family: $primary-font;
+}
 .header {
   background-color: $primary-color;
   height: 10vh;
