@@ -118,7 +118,7 @@ body {
 }
 @media all and (max-width: 1500px) {
   .landing__title {
-    margin-top: 70px;
+    margin-top: 20px;
   }
 }
 @media all and (max-width: 920px) {
@@ -182,13 +182,13 @@ body {
   font-weight: bold;
   color: #2e455d;
   text-align: center;
-  padding: 80px;
-  margin-top: 100px;
+  padding: 30px 0px;
+  margin-top: 80px;
 }
 @media all and (max-width: 1500px) {
   .about__title {
     margin-top: 15px;
-    padding: 40px;
+    padding: 20px;
     font-size: 30px;
   }
 }
@@ -210,7 +210,7 @@ body {
 }
 @media all and (max-width: 1500px) {
   .about__text {
-    width: 790px;
+    width: 830px;
     font-size: 20px;
     padding: 10px 0px;
   }
