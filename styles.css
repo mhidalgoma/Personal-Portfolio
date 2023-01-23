@@ -509,6 +509,10 @@ body {
     width: 300px;
   }
 }
+.projects__list--item:hover {
+  border: 5px solid #00d1b2;
+  transform: translateY(-0.25em);
+}
 
 .talk {
   height: 100vh;

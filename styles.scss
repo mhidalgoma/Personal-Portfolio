@@ -433,6 +433,10 @@ body {
         width: 300px;
       }
     }
+    &--item:hover {
+      border: 5px solid $primary-color;
+      transform: translateY(-0.25em);
+    }
   }
 }
 .talk {
