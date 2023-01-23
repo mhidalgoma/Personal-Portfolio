@@ -168,7 +168,7 @@ body {
 }
 @media all and (max-width: 1500px) {
   .about {
-    min-height: 600px;
+    min-height: 700px;
   }
 }
 @media all and (max-width: 920px) {
