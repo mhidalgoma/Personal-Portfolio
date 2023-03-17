@@ -21,7 +21,7 @@ a:active {
 
 /* VARIABLES */
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .header {
@@ -313,7 +313,8 @@ body {
   width: 350px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   position: relative;
   top: -250px;
   display: flex;
@@ -413,9 +414,8 @@ body {
 }
 
 .projects {
-  height: 100vh;
-  min-height: 1000px;
   display: flex;
+  min-height: 1200px;
   flex-direction: column;
   align-items: center;
 }
@@ -492,7 +492,8 @@ body {
 }
 .projects__list--item {
   border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   background-color: #a7ede0;
   height: 250px;
   width: 400px;
@@ -639,32 +640,37 @@ body {
 }
 
 .breaking-bad {
-  background-image: url("./images/breaking-bad.png");
+  background-image: url('./images/breaking-bad.png');
   background-size: cover;
 }
 
 .star-cards {
-  background-image: url("./images/star-cards.png");
+  background-image: url('./images/star-cards.png');
   background-size: cover;
 }
 
 .leap {
-  background-image: url("./images/leap.png");
+  background-image: url('./images/leap.png');
   background-size: cover;
 }
 
 .hangman {
-  background-image: url("./images/hangman.png");
+  background-image: url('./images/hangman.png');
   background-size: cover;
 }
 
 .rick-morty {
-  background-image: url("./images/rick-morty.png");
+  background-image: url('./images/rick-morty.png');
   background-size: cover;
 }
 
 .proxy {
-  background-image: url("./images/proxy.png");
+  background-image: url('./images/proxy.png');
+  background-size: cover;
+}
+
+.dino {
+  background-image: url('./images/dino.png');
   background-size: cover;
 }
 
