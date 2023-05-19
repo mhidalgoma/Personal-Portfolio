@@ -668,4 +668,9 @@ body {
   background-size: cover;
 }
 
+.dino {
+  background-image: url("./images/dino.png");
+  background-size: cover;
+}
+
 /*# sourceMappingURL=styles.css.map */
